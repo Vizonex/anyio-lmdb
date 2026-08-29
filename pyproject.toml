@@ -28,6 +28,9 @@ version = {attr = "anyio_lmdb.__version__"}
 [build-system]
 requires = ["setuptools"]
 
+[project.urls]
+    repository = "https://github.com/Vizonex/anyio-lmdb.git"
+
 
 [tool.ruff]
 line-length = 79

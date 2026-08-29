@@ -1,0 +1,43 @@
+[project]
+name = "anyio-lmdb"
+dynamic = ["version"]
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Vizonex", email = "VizonexBusiness@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "anyio>=4.14.1",
+    "lmdb>=2.2.1",
+    "wrapt>=2.2.2",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=9.1.1",
+]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "anyio_lmdb.__version__"}
+
+[build-system]
+requires = ["setuptools"]
+
+
+[tool.ruff]
+line-length = 79
+indent-width = 4
+target-version = "py310"
+fix = true
+
+[tool.ruff.lint]
+select = [
+    "I",
+    "E",
+    "RUF"
+]
+ignore = [
+    "F405",
+]
